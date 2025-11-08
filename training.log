@@ -1,0 +1,1458 @@
+2025-11-03 14:35:01,773 - __main__ - INFO - Starting model training...
+2025-11-03 14:35:01,773 - __main__ - INFO - Loading data...
+2025-11-03 14:35:01,781 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-03 14:35:02,746 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-03 14:35:02,748 - __main__ - INFO - Preprocessing data for classification...
+2025-11-03 14:35:02,748 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-03 14:35:02,800 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-03 14:35:02,800 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario', 'emi_eligibility']
+2025-11-03 14:35:02,883 - __main__ - ERROR - Error during model training: "['emi_eligible'] not found in axis"
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 71, in train_models
+    X_train_clf, X_val_clf, X_test_clf, y_train_clf, y_val_clf, y_test_clf = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 95, in preprocess_data
+    X = df.drop(columns=[self.target_column])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\frame.py", line 5603, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\generic.py", line 4810, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\generic.py", line 4852, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\indexes\base.py", line 7136, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['emi_eligible'] not found in axis"
+2025-11-03 14:35:02,897 - __main__ - ERROR - Error in main: "['emi_eligible'] not found in axis"
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 71, in train_models
+    X_train_clf, X_val_clf, X_test_clf, y_train_clf, y_val_clf, y_test_clf = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 95, in preprocess_data
+    X = df.drop(columns=[self.target_column])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\frame.py", line 5603, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\generic.py", line 4810, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\generic.py", line 4852, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\indexes\base.py", line 7136, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['emi_eligible'] not found in axis"
+2025-11-03 19:50:07,298 - __main__ - INFO - Starting model training...
+2025-11-03 19:50:07,298 - __main__ - INFO - Loading data...
+2025-11-03 19:50:07,298 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-03 19:50:07,979 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-03 19:50:07,980 - __main__ - INFO - Preprocessing data for classification...
+2025-11-03 19:50:07,980 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-03 19:50:08,053 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-03 19:50:08,053 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario', 'emi_eligibility']
+2025-11-03 19:50:08,086 - __main__ - ERROR - Error during model training: "['emi_eligible'] not found in axis"
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 71, in train_models
+    X_train_clf, X_val_clf, X_test_clf, y_train_clf, y_val_clf, y_test_clf = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 95, in preprocess_data
+    X = df.drop(columns=[self.target_column])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\frame.py", line 5603, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\generic.py", line 4810, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\generic.py", line 4852, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\indexes\base.py", line 7136, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['emi_eligible'] not found in axis"
+2025-11-03 19:50:08,113 - __main__ - ERROR - Error in main: "['emi_eligible'] not found in axis"
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 71, in train_models
+    X_train_clf, X_val_clf, X_test_clf, y_train_clf, y_val_clf, y_test_clf = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 95, in preprocess_data
+    X = df.drop(columns=[self.target_column])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\frame.py", line 5603, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\generic.py", line 4810, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\generic.py", line 4852, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\indexes\base.py", line 7136, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['emi_eligible'] not found in axis"
+2025-11-03 19:52:00,724 - __main__ - INFO - Starting model training...
+2025-11-03 19:52:00,724 - __main__ - INFO - Loading data...
+2025-11-03 19:52:00,725 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-03 19:52:01,389 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-03 19:52:01,389 - __main__ - INFO - Preprocessing data for classification...
+2025-11-03 19:52:01,391 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-03 19:52:01,464 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-03 19:52:01,464 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario', 'emi_eligibility']
+2025-11-03 19:52:01,493 - __main__ - ERROR - Error during model training: "['emi_eligible'] not found in axis"
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 71, in train_models
+    X_train_clf, X_val_clf, X_test_clf, y_train_clf, y_val_clf, y_test_clf = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 95, in preprocess_data
+    X = df.drop(columns=[self.target_column])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\frame.py", line 5603, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\generic.py", line 4810, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\generic.py", line 4852, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\indexes\base.py", line 7136, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['emi_eligible'] not found in axis"
+2025-11-03 19:52:01,498 - __main__ - ERROR - Error in main: "['emi_eligible'] not found in axis"
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 71, in train_models
+    X_train_clf, X_val_clf, X_test_clf, y_train_clf, y_val_clf, y_test_clf = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 95, in preprocess_data
+    X = df.drop(columns=[self.target_column])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\frame.py", line 5603, in drop
+    return super().drop(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\generic.py", line 4810, in drop
+    obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\generic.py", line 4852, in _drop_axis
+    new_axis = axis.drop(labels, errors=errors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\pandas\core\indexes\base.py", line 7136, in drop
+    raise KeyError(f"{labels[mask].tolist()} not found in axis")
+KeyError: "['emi_eligible'] not found in axis"
+2025-11-03 20:26:59,509 - __main__ - INFO - Starting model training...
+2025-11-03 20:26:59,509 - __main__ - INFO - Loading data...
+2025-11-03 20:26:59,509 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-03 20:27:00,204 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-03 20:27:00,204 - __main__ - INFO - Preprocessing data for classification...
+2025-11-03 20:27:00,205 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-03 20:27:00,282 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-03 20:27:00,282 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-03 20:27:00,959 - __main__ - ERROR - Error during model training: Encoders require their input argument must be uniformly strings or numbers. Got ['float', 'str']
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_encode.py", line 183, in _unique_python
+    uniques = sorted(uniques_set)
+              ^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'float' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 71, in train_models
+    X_train_clf, X_val_clf, X_test_clf, y_train_clf, y_val_clf, y_test_clf = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 115, in preprocess_data
+    self.preprocessor.fit(X_train)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 934, in fit
+    self.fit_transform(X, y=y, **params)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 996, in fit_transform
+    result = self._call_func_on_transformers(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 897, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\parallel.py", line 82, in __call__
+    return super().__call__(iterable_with_config_and_warning_filters)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\joblib\parallel.py", line 1986, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\joblib\parallel.py", line 1914, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\parallel.py", line 147, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\pipeline.py", line 1540, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\pipeline.py", line 731, in fit_transform
+    return last_step.fit_transform(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\base.py", line 894, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\preprocessing\_encoders.py", line 991, in fit
+    self._fit(
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\preprocessing\_encoders.py", line 103, in _fit
+    result = _unique(Xi, return_counts=compute_counts)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_encode.py", line 52, in _unique
+    return _unique_python(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_encode.py", line 188, in _unique_python
+    raise TypeError(
+TypeError: Encoders require their input argument must be uniformly strings or numbers. Got ['float', 'str']
+2025-11-03 20:27:00,966 - __main__ - ERROR - Error in main: Encoders require their input argument must be uniformly strings or numbers. Got ['float', 'str']
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_encode.py", line 183, in _unique_python
+    uniques = sorted(uniques_set)
+              ^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'float' and 'str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 71, in train_models
+    X_train_clf, X_val_clf, X_test_clf, y_train_clf, y_val_clf, y_test_clf = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 115, in preprocess_data
+    self.preprocessor.fit(X_train)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 934, in fit
+    self.fit_transform(X, y=y, **params)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 996, in fit_transform
+    result = self._call_func_on_transformers(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 897, in _call_func_on_transformers
+    return Parallel(n_jobs=self.n_jobs)(jobs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\parallel.py", line 82, in __call__
+    return super().__call__(iterable_with_config_and_warning_filters)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\joblib\parallel.py", line 1986, in __call__
+    return output if self.return_generator else list(output)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\joblib\parallel.py", line 1914, in _get_sequential_output
+    res = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\parallel.py", line 147, in __call__
+    return self.function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\pipeline.py", line 1540, in _fit_transform_one
+    res = transformer.fit_transform(X, y, **params.get("fit_transform", {}))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\pipeline.py", line 731, in fit_transform
+    return last_step.fit_transform(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\base.py", line 894, in fit_transform
+    return self.fit(X, **fit_params).transform(X)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\preprocessing\_encoders.py", line 991, in fit
+    self._fit(
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\preprocessing\_encoders.py", line 103, in _fit
+    result = _unique(Xi, return_counts=compute_counts)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_encode.py", line 52, in _unique
+    return _unique_python(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_encode.py", line 188, in _unique_python
+    raise TypeError(
+TypeError: Encoders require their input argument must be uniformly strings or numbers. Got ['float', 'str']
+2025-11-03 21:13:15,653 - __main__ - INFO - Starting model training...
+2025-11-03 21:13:15,654 - __main__ - INFO - Loading data...
+2025-11-03 21:13:15,654 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-03 21:13:16,474 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-03 21:13:16,474 - __main__ - INFO - Preprocessing data for classification...
+2025-11-03 21:13:16,474 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-03 21:13:16,560 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-03 21:13:16,561 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-03 21:16:39,610 - __main__ - ERROR - Error during model training: Unable to allocate 13.2 GiB for an array with shape (80960, 21837) and data type float64
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 71, in train_models
+    X_train_clf, X_val_clf, X_test_clf, y_train_clf, y_val_clf, y_test_clf = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 125, in preprocess_data
+    X_test_processed = self.preprocessor.transform(X_test)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1109, in transform
+    return self._hstack(list(Xs), n_samples=n_samples)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1220, in _hstack
+    return np.hstack(Xs)
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\numpy\core\shape_base.py", line 359, in hstack
+    return _nx.concatenate(arrs, 1, dtype=dtype, casting=casting)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 13.2 GiB for an array with shape (80960, 21837) and data type float64
+2025-11-03 21:16:39,762 - __main__ - ERROR - Error in main: Unable to allocate 13.2 GiB for an array with shape (80960, 21837) and data type float64
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 71, in train_models
+    X_train_clf, X_val_clf, X_test_clf, y_train_clf, y_val_clf, y_test_clf = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 125, in preprocess_data
+    X_test_processed = self.preprocessor.transform(X_test)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1109, in transform
+    return self._hstack(list(Xs), n_samples=n_samples)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1220, in _hstack
+    return np.hstack(Xs)
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\numpy\core\shape_base.py", line 359, in hstack
+    return _nx.concatenate(arrs, 1, dtype=dtype, casting=casting)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 13.2 GiB for an array with shape (80960, 21837) and data type float64
+2025-11-03 21:42:03,734 - __main__ - INFO - Starting model training...
+2025-11-03 21:42:03,734 - __main__ - INFO - Loading data...
+2025-11-03 21:42:03,734 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-03 21:42:04,899 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-03 21:42:04,899 - __main__ - INFO - Preprocessing data for classification...
+2025-11-03 21:42:04,899 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-03 21:42:05,026 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-03 21:42:05,027 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-03 21:42:11,933 - __main__ - ERROR - Error during model training: Unable to allocate 46.1 GiB for an array with shape (283360, 21837) and data type float64
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 71, in train_models
+    X_train_clf, X_val_clf, X_test_clf, y_train_clf, y_val_clf, y_test_clf = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 126, in preprocess_data
+    self.preprocessor.fit(X_train)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 934, in fit
+    self.fit_transform(X, y=y, **params)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1026, in fit_transform
+    return self._hstack(list(Xs), n_samples=n_samples)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1220, in _hstack
+    return np.hstack(Xs)
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\numpy\core\shape_base.py", line 359, in hstack
+    return _nx.concatenate(arrs, 1, dtype=dtype, casting=casting)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 46.1 GiB for an array with shape (283360, 21837) and data type float64
+2025-11-03 21:42:11,941 - __main__ - ERROR - Error in main: Unable to allocate 46.1 GiB for an array with shape (283360, 21837) and data type float64
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 71, in train_models
+    X_train_clf, X_val_clf, X_test_clf, y_train_clf, y_val_clf, y_test_clf = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 126, in preprocess_data
+    self.preprocessor.fit(X_train)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 934, in fit
+    self.fit_transform(X, y=y, **params)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_set_output.py", line 316, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1026, in fit_transform
+    return self._hstack(list(Xs), n_samples=n_samples)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\compose\_column_transformer.py", line 1220, in _hstack
+    return np.hstack(Xs)
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\numpy\core\shape_base.py", line 359, in hstack
+    return _nx.concatenate(arrs, 1, dtype=dtype, casting=casting)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 46.1 GiB for an array with shape (283360, 21837) and data type float64
+2025-11-03 21:43:53,227 - __main__ - INFO - Starting model training...
+2025-11-03 21:43:53,227 - __main__ - INFO - Loading data...
+2025-11-03 21:43:53,229 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-03 21:43:54,362 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-03 21:43:54,362 - __main__ - INFO - Preprocessing data for classification...
+2025-11-03 21:43:54,362 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-03 21:43:54,484 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-03 21:43:54,484 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-03 21:43:57,384 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-03 21:43:57,464 - __main__ - INFO - Saved preprocessor to models\preprocessor.joblib
+2025-11-03 21:43:57,548 - __main__ - INFO - Training classification models...
+2025-11-03 21:44:01,642 - src.models.model_trainer - INFO - Training classification models...
+2025-11-03 21:44:01,697 - __main__ - ERROR - Error during model training: Run with UUID 627d1ee48f534573a906daba6c9b8b03 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 89, in train_models
+    clf_result = trainer.train_classification_models(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\models\model_trainer.py", line 105, in train_classification_models
+    with mlflow.start_run(run_name=f"classification_{name}"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 380, in start_run
+    raise Exception(
+Exception: Run with UUID 627d1ee48f534573a906daba6c9b8b03 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2025-11-03 21:44:01,707 - __main__ - ERROR - Error in main: Run with UUID 627d1ee48f534573a906daba6c9b8b03 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 89, in train_models
+    clf_result = trainer.train_classification_models(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\models\model_trainer.py", line 105, in train_classification_models
+    with mlflow.start_run(run_name=f"classification_{name}"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 380, in start_run
+    raise Exception(
+Exception: Run with UUID 627d1ee48f534573a906daba6c9b8b03 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2025-11-03 21:56:13,384 - __main__ - INFO - Starting model training...
+2025-11-03 21:56:13,384 - __main__ - INFO - Loading data...
+2025-11-03 21:56:13,384 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-03 21:56:14,574 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-03 21:56:14,574 - __main__ - INFO - Preprocessing data for classification...
+2025-11-03 21:56:14,574 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-03 21:56:14,701 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-03 21:56:14,702 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-03 21:56:17,283 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-03 21:56:17,364 - __main__ - INFO - Saved preprocessor to models\preprocessor.joblib
+2025-11-03 21:56:17,457 - __main__ - INFO - Training classification models...
+2025-11-03 21:56:17,786 - src.models.model_trainer - INFO - Training classification models...
+2025-11-03 21:56:17,834 - src.models.model_trainer - INFO - Training logistic_regression...
+2025-11-03 21:56:18,283 - __main__ - ERROR - Error during model training: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 89, in train_models
+    clf_result = trainer.train_classification_models(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\models\model_trainer.py", line 109, in train_classification_models
+    model.fit(X_train, y_train)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 483, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 181, in patch_with_managed_run
+    result = patch_function(original, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\sklearn\__init__.py", line 1717, in patched_fit
+    result = fit_impl(original, self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\sklearn\__init__.py", line 1462, in fit_mlflow
+    fit_output = original(self, *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 474, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 425, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 471, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\linear_model\_logistic.py", line 1247, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\validation.py", line 2971, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\validation.py", line 1368, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\validation.py", line 1105, in check_array
+    _assert_all_finite(
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-11-03 21:56:18,305 - __main__ - ERROR - Error in main: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 89, in train_models
+    clf_result = trainer.train_classification_models(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\models\model_trainer.py", line 109, in train_classification_models
+    model.fit(X_train, y_train)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 483, in safe_patch_function
+    patch_function(call_original, *args, **kwargs)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 181, in patch_with_managed_run
+    result = patch_function(original, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\sklearn\__init__.py", line 1717, in patched_fit
+    result = fit_impl(original, self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\sklearn\__init__.py", line 1462, in fit_mlflow
+    fit_output = original(self, *args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 474, in call_original
+    return call_original_fn_with_event_logging(_original_fn, og_args, og_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 425, in call_original_fn_with_event_logging
+    original_fn_result = original_fn(*og_args, **og_kwargs)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\autologging_utils\safety.py", line 471, in _original_fn
+    original_result = original(*_og_args, **_og_kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\base.py", line 1365, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\linear_model\_logistic.py", line 1247, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\validation.py", line 2971, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\validation.py", line 1368, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\validation.py", line 1105, in check_array
+    _assert_all_finite(
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\validation.py", line 120, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\validation.py", line 169, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input X contains NaN.
+LogisticRegression does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-11-03 22:13:13,139 - __main__ - INFO - Starting model training...
+2025-11-03 22:13:13,139 - __main__ - INFO - Loading data...
+2025-11-03 22:13:13,140 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-03 22:13:14,064 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-03 22:13:14,069 - __main__ - INFO - Preprocessing data for classification...
+2025-11-03 22:13:14,069 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-03 22:13:14,164 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-03 22:13:14,164 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-03 22:13:17,508 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-03 22:13:17,580 - __main__ - INFO - Saved preprocessor to models\preprocessor.joblib
+2025-11-03 22:13:17,634 - __main__ - INFO - Training classification models...
+2025-11-03 22:13:17,901 - src.models.model_trainer - INFO - Training classification models...
+2025-11-03 22:13:17,933 - src.models.model_trainer - INFO - Training logistic_regression...
+2025-11-03 22:13:46,495 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-03 22:15:30,590 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-03 22:15:30,807 - __main__ - ERROR - Error during model training: Invalid classes inferred from unique values of `y`.  Expected: [0 1 2], got ['Eligible' 'High_Risk' 'Not_Eligible']
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 89, in train_models
+    clf_result = trainer.train_classification_models(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\models\model_trainer.py", line 109, in train_classification_models
+    model.fit(X_train, y_train)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\xgboost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\xgboost\sklearn.py", line 1758, in fit
+    raise ValueError(
+ValueError: Invalid classes inferred from unique values of `y`.  Expected: [0 1 2], got ['Eligible' 'High_Risk' 'Not_Eligible']
+2025-11-03 22:15:30,811 - __main__ - ERROR - Error in main: Invalid classes inferred from unique values of `y`.  Expected: [0 1 2], got ['Eligible' 'High_Risk' 'Not_Eligible']
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 89, in train_models
+    clf_result = trainer.train_classification_models(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\models\model_trainer.py", line 109, in train_classification_models
+    model.fit(X_train, y_train)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\xgboost\core.py", line 774, in inner_f
+    return func(**kwargs)
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\xgboost\sklearn.py", line 1758, in fit
+    raise ValueError(
+ValueError: Invalid classes inferred from unique values of `y`.  Expected: [0 1 2], got ['Eligible' 'High_Risk' 'Not_Eligible']
+2025-11-03 22:44:00,407 - __main__ - INFO - Starting model training...
+2025-11-03 22:44:00,409 - __main__ - INFO - Loading data...
+2025-11-03 22:44:00,409 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-03 22:44:01,600 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-03 22:44:01,600 - __main__ - INFO - Preprocessing data for classification...
+2025-11-03 22:44:01,601 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-03 22:44:01,716 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-03 22:44:01,716 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-03 22:44:05,008 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-03 22:44:05,076 - __main__ - INFO - Saved preprocessor to models\preprocessor.joblib
+2025-11-03 22:44:05,149 - __main__ - INFO - Training classification models...
+2025-11-03 22:44:05,399 - src.models.model_trainer - INFO - Training classification models...
+2025-11-03 22:44:05,430 - src.models.model_trainer - INFO - Training logistic_regression...
+2025-11-03 22:44:20,483 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-03 22:46:13,953 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-03 22:46:26,051 - src.models.model_trainer - INFO - Training svc...
+2025-11-04 11:06:35,724 - urllib3.connectionpool - WARNING - Retrying (Retry(total=6, connect=6, read=7, redirect=7, status=7)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028342899150>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction
+2025-11-04 11:06:43,792 - urllib3.connectionpool - WARNING - Retrying (Retry(total=5, connect=5, read=7, redirect=7, status=7)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000283427655D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction
+2025-11-04 11:06:56,636 - urllib3.connectionpool - WARNING - Retrying (Retry(total=4, connect=4, read=7, redirect=7, status=7)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002834289B450>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction
+2025-11-04 11:07:17,522 - urllib3.connectionpool - WARNING - Retrying (Retry(total=3, connect=3, read=7, redirect=7, status=7)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000283428A1B10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction
+2025-11-04 11:07:54,494 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=2, read=7, redirect=7, status=7)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000283428A02D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction
+2025-11-04 11:09:02,844 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=1, read=7, redirect=7, status=7)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000283428A2E50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction
+2025-11-04 11:11:06,877 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=0, read=7, redirect=7, status=7)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000283428A3D50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction
+2025-11-04 11:11:10,973 - __main__ - ERROR - Error during model training: API request to http://localhost:5000/api/2.0/mlflow/experiments/get-by-name failed with exception HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000283428839D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+  File "C:\Program Files\Python311\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Program Files\Python311\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\Program Files\Python311\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000283428839D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\requests\adapters.py", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  [Previous line repeated 4 more times]
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000283428839D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 232, in http_request
+    return _get_http_response_with_retries(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\request_utils.py", line 237, in _get_http_response_with_retries
+    return session.request(method, url, allow_redirects=allow_redirects, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\requests\adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000283428839D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 55, in train_models
+    mlflow.set_experiment(MLflowConfig.EXPERIMENT_NAME)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 184, in set_experiment
+    experiment = client.get_experiment_by_name(experiment_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 280, in get_experiment_by_name
+    return self.store.get_experiment_by_name(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 827, in get_experiment_by_name
+    response_proto = self._call_endpoint(GetExperimentByName, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 201, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 587, in call_endpoint
+    response = http_request(**call_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 255, in http_request
+    raise MlflowException(f"API request to {url} failed with exception {e}")
+mlflow.exceptions.MlflowException: API request to http://localhost:5000/api/2.0/mlflow/experiments/get-by-name failed with exception HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000283428839D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-04 11:11:11,001 - __main__ - ERROR - Error in main: API request to http://localhost:5000/api/2.0/mlflow/experiments/get-by-name failed with exception HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000283428839D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connection.py", line 494, in request
+    self.endheaders()
+  File "C:\Program Files\Python311\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Program Files\Python311\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\Program Files\Python311\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connection.py", line 325, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000283428839D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\requests\adapters.py", line 644, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  [Previous line repeated 4 more times]
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000283428839D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 232, in http_request
+    return _get_http_response_with_retries(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\request_utils.py", line 237, in _get_http_response_with_retries
+    return session.request(method, url, allow_redirects=allow_redirects, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\requests\adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000283428839D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 55, in train_models
+    mlflow.set_experiment(MLflowConfig.EXPERIMENT_NAME)
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 184, in set_experiment
+    experiment = client.get_experiment_by_name(experiment_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 280, in get_experiment_by_name
+    return self.store.get_experiment_by_name(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 827, in get_experiment_by_name
+    response_proto = self._call_endpoint(GetExperimentByName, req_body)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\store\tracking\rest_store.py", line 201, in _call_endpoint
+    return call_endpoint(
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 587, in call_endpoint
+    response = http_request(**call_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\utils\rest_utils.py", line 255, in http_request
+    raise MlflowException(f"API request to {url} failed with exception {e}")
+mlflow.exceptions.MlflowException: API request to http://localhost:5000/api/2.0/mlflow/experiments/get-by-name failed with exception HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=emi_prediction (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000283428839D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-11-04 11:12:33,735 - __main__ - INFO - Starting model training...
+2025-11-04 11:12:33,735 - __main__ - INFO - Loading data...
+2025-11-04 11:12:33,736 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-04 11:12:34,395 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-04 11:12:34,395 - __main__ - INFO - Preprocessing data for classification...
+2025-11-04 11:12:34,397 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 11:12:34,468 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-04 11:12:34,468 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-04 11:12:36,652 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-04 11:12:36,708 - __main__ - INFO - Saved preprocessor to models\preprocessor.joblib
+2025-11-04 11:12:36,736 - __main__ - INFO - Training classification models...
+2025-11-04 11:12:37,178 - src.models.model_trainer - INFO - Training classification models...
+2025-11-04 11:12:37,206 - src.models.model_trainer - INFO - Training logistic_regression...
+2025-11-04 11:12:46,092 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-04 11:17:36,003 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-04 11:17:43,151 - src.models.model_trainer - INFO - Training gradient_boosting...
+2025-11-04 11:23:11,245 - src.models.model_trainer - INFO - Best classification model: xgboost with F1-score: 0.9874
+2025-11-04 11:23:11,276 - __main__ - INFO - Saved classification model to models\best_classification_model.joblib
+2025-11-04 11:23:11,314 - __main__ - INFO - Model training completed successfully!
+2025-11-04 11:23:11,361 - __main__ - INFO - Training completed successfully!
+2025-11-04 12:26:24,148 - __main__ - INFO - Starting model training...
+2025-11-04 12:26:24,152 - __main__ - INFO - Loading data...
+2025-11-04 12:26:24,153 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-04 12:26:25,246 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-04 12:26:25,246 - __main__ - INFO - Preprocessing data for classification...
+2025-11-04 12:26:25,246 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 12:26:25,342 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-04 12:26:25,342 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-04 12:26:28,472 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-04 12:26:28,600 - __main__ - INFO - Training classification models...
+2025-11-04 12:26:29,030 - src.models.model_trainer - INFO - Training classification models...
+2025-11-04 12:26:29,086 - src.models.model_trainer - INFO - Training logistic_regression...
+2025-11-04 12:26:42,435 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-04 12:32:37,227 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-04 12:32:49,645 - src.models.model_trainer - INFO - Training gradient_boosting...
+2025-11-04 12:43:46,750 - src.models.model_trainer - INFO - Best classification model: xgboost with F1-score: 0.9874
+2025-11-04 12:43:46,796 - __main__ - INFO - Saved classification model to models\best_classification_model.joblib
+2025-11-04 12:43:46,883 - __main__ - INFO - Model training completed successfully!
+2025-11-04 12:43:46,960 - __main__ - INFO - Training completed successfully!
+2025-11-04 13:59:54,493 - __main__ - INFO - Starting model training...
+2025-11-04 13:59:54,493 - __main__ - INFO - Loading data...
+2025-11-04 13:59:54,493 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-04 13:59:55,648 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-04 13:59:55,648 - __main__ - INFO - Preprocessing data for classification...
+2025-11-04 13:59:55,651 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 13:59:55,769 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-04 13:59:55,769 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-04 13:59:59,479 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-04 14:00:01,658 - __main__ - INFO - Training classification models...
+2025-11-04 14:00:01,981 - src.models.model_trainer - INFO - Training classification models...
+2025-11-04 14:00:02,033 - src.models.model_trainer - INFO - Training logistic_regression...
+2025-11-04 14:00:18,488 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-04 14:06:20,648 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-04 14:06:33,760 - src.models.model_trainer - INFO - Training gradient_boosting...
+2025-11-04 14:17:14,352 - src.models.model_trainer - INFO - Best classification model: xgboost with F1-score: 0.9874
+2025-11-04 14:17:14,437 - __main__ - INFO - Saved classification model to models\best_classification_model.joblib
+2025-11-04 14:17:14,548 - __main__ - INFO - Preprocessing data for regression...
+2025-11-04 14:17:14,549 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 14:17:14,663 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure']
+2025-11-04 14:17:14,663 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario', 'emi_eligibility']
+2025-11-04 14:17:15,298 - __main__ - ERROR - Error during model training: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 105, in train_models
+    X_train_reg, X_val_reg, X_test_reg, y_train_reg, y_val_reg, y_test_reg = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 126, in preprocess_data
+    X_train_val, X_test, y_train_val, y_test = train_test_split(
+                                               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2940, in train_test_split
+    train, test = next(cv.split(X=arrays[0], y=stratify))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 1927, in split
+    for train, test in self._iter_indices(X, y, groups):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2342, in _iter_indices
+    raise ValueError(
+ValueError: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+2025-11-04 14:17:15,306 - __main__ - ERROR - Error in main: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 105, in train_models
+    X_train_reg, X_val_reg, X_test_reg, y_train_reg, y_val_reg, y_test_reg = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 126, in preprocess_data
+    X_train_val, X_test, y_train_val, y_test = train_test_split(
+                                               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2940, in train_test_split
+    train, test = next(cv.split(X=arrays[0], y=stratify))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 1927, in split
+    for train, test in self._iter_indices(X, y, groups):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2342, in _iter_indices
+    raise ValueError(
+ValueError: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+2025-11-04 14:53:20,265 - __main__ - INFO - Starting model training...
+2025-11-04 14:53:20,266 - __main__ - INFO - Loading data...
+2025-11-04 14:53:20,266 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-04 14:53:20,935 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-04 14:53:20,936 - __main__ - INFO - Preprocessing data for classification...
+2025-11-04 14:53:20,936 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 14:53:21,008 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-04 14:53:21,008 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-04 14:53:23,436 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-04 14:53:23,522 - __main__ - INFO - Training classification models...
+2025-11-04 14:53:23,703 - src.models.model_trainer - INFO - Training classification models...
+2025-11-04 14:53:23,731 - src.models.model_trainer - INFO - Training logistic_regression...
+2025-11-04 14:53:31,875 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-04 14:57:55,309 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-04 14:58:02,358 - src.models.model_trainer - INFO - Training gradient_boosting...
+2025-11-04 15:03:54,834 - src.models.model_trainer - INFO - Best classification model: xgboost with F1-score: 0.9874
+2025-11-04 15:03:54,876 - __main__ - INFO - Saved classification model to models\best_classification_model.joblib
+2025-11-04 15:03:54,917 - __main__ - INFO - Preprocessing data for regression...
+2025-11-04 15:03:54,917 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 15:03:55,008 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure']
+2025-11-04 15:03:55,008 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario', 'emi_eligibility']
+2025-11-04 15:03:55,543 - __main__ - ERROR - Error during model training: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 105, in train_models
+    X_train_reg, X_val_reg, X_test_reg, y_train_reg, y_val_reg, y_test_reg = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 152, in preprocess_data
+    X_train, X_val, y_train, y_val = train_test_split(
+                                     ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2940, in train_test_split
+    train, test = next(cv.split(X=arrays[0], y=stratify))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 1927, in split
+    for train, test in self._iter_indices(X, y, groups):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2342, in _iter_indices
+    raise ValueError(
+ValueError: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+2025-11-04 15:03:55,546 - __main__ - ERROR - Error in main: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 105, in train_models
+    X_train_reg, X_val_reg, X_test_reg, y_train_reg, y_val_reg, y_test_reg = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 152, in preprocess_data
+    X_train, X_val, y_train, y_val = train_test_split(
+                                     ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2940, in train_test_split
+    train, test = next(cv.split(X=arrays[0], y=stratify))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 1927, in split
+    for train, test in self._iter_indices(X, y, groups):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2342, in _iter_indices
+    raise ValueError(
+ValueError: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+2025-11-04 15:15:50,575 - __main__ - INFO - Starting model training...
+2025-11-04 15:15:50,576 - __main__ - INFO - Loading data...
+2025-11-04 15:15:50,576 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-04 15:15:51,348 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-04 15:15:51,348 - __main__ - INFO - Preprocessing data for classification...
+2025-11-04 15:15:51,349 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 15:15:51,419 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-04 15:15:51,420 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-04 15:15:51,674 - src.features.data_preprocessing - INFO - Detected task type: CLASSIFICATION
+2025-11-04 15:15:54,166 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-04 15:15:54,277 - __main__ - INFO - Training classification models...
+2025-11-04 15:15:54,476 - src.models.model_trainer - INFO - Training classification models...
+2025-11-04 15:15:54,509 - src.models.model_trainer - INFO - Training logistic_regression...
+2025-11-04 15:16:03,796 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-04 15:20:38,684 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-04 15:20:46,044 - src.models.model_trainer - INFO - Training gradient_boosting...
+2025-11-04 15:26:41,728 - src.models.model_trainer - INFO - Best classification model: xgboost with F1-score: 0.9874
+2025-11-04 15:26:41,761 - __main__ - INFO - Saved classification model to models\best_classification_model.joblib
+2025-11-04 15:26:41,803 - __main__ - INFO - Preprocessing data for regression...
+2025-11-04 15:26:41,803 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 15:26:41,888 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure']
+2025-11-04 15:26:41,889 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario', 'emi_eligibility']
+2025-11-04 15:26:42,138 - src.features.data_preprocessing - INFO - Detected task type: REGRESSION
+2025-11-04 15:26:42,362 - __main__ - ERROR - Error during model training: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 105, in train_models
+    X_train_reg, X_val_reg, X_test_reg, y_train_reg, y_val_reg, y_test_reg = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 157, in preprocess_data
+    X_train, X_val, y_train, y_val = train_test_split(
+                                     ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2940, in train_test_split
+    train, test = next(cv.split(X=arrays[0], y=stratify))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 1927, in split
+    for train, test in self._iter_indices(X, y, groups):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2342, in _iter_indices
+    raise ValueError(
+ValueError: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+2025-11-04 15:26:42,364 - __main__ - ERROR - Error in main: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 105, in train_models
+    X_train_reg, X_val_reg, X_test_reg, y_train_reg, y_val_reg, y_test_reg = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 157, in preprocess_data
+    X_train, X_val, y_train, y_val = train_test_split(
+                                     ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2940, in train_test_split
+    train, test = next(cv.split(X=arrays[0], y=stratify))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 1927, in split
+    for train, test in self._iter_indices(X, y, groups):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2342, in _iter_indices
+    raise ValueError(
+ValueError: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+2025-11-04 15:31:44,133 - __main__ - INFO - Starting model training...
+2025-11-04 15:31:44,133 - __main__ - INFO - Loading data...
+2025-11-04 15:31:44,134 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-04 15:31:44,917 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-04 15:31:44,917 - __main__ - INFO - Preprocessing data for classification...
+2025-11-04 15:31:44,918 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 15:31:44,997 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-04 15:31:44,997 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-04 15:31:45,250 - src.features.data_preprocessing - INFO - Detected task type: CLASSIFICATION
+2025-11-04 15:31:47,706 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-04 15:31:47,809 - __main__ - INFO - Training classification models...
+2025-11-04 15:31:48,015 - src.models.model_trainer - INFO - Training classification models...
+2025-11-04 15:31:48,047 - src.models.model_trainer - INFO - Training logistic_regression...
+2025-11-04 15:32:26,021 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-04 15:37:44,010 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-04 15:37:51,578 - src.models.model_trainer - INFO - Training gradient_boosting...
+2025-11-04 15:43:39,201 - src.models.model_trainer - INFO - Best classification model: xgboost with F1-score: 0.9874
+2025-11-04 15:43:39,232 - __main__ - INFO - Saved classification model to models\best_classification_model.joblib
+2025-11-04 15:43:39,275 - __main__ - INFO - Preprocessing data for regression...
+2025-11-04 15:43:39,275 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 15:43:39,362 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure']
+2025-11-04 15:43:39,363 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario', 'emi_eligibility']
+2025-11-04 15:43:39,654 - src.features.data_preprocessing - INFO - Detected task type: REGRESSION
+2025-11-04 15:43:39,915 - __main__ - ERROR - Error during model training: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 105, in train_models
+    X_train_reg, X_val_reg, X_test_reg, y_train_reg, y_val_reg, y_test_reg = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 157, in preprocess_data
+    X_train, X_val, y_train, y_val = train_test_split(
+                                     ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2940, in train_test_split
+    train, test = next(cv.split(X=arrays[0], y=stratify))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 1927, in split
+    for train, test in self._iter_indices(X, y, groups):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2342, in _iter_indices
+    raise ValueError(
+ValueError: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+2025-11-04 15:43:39,917 - __main__ - ERROR - Error in main: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 105, in train_models
+    X_train_reg, X_val_reg, X_test_reg, y_train_reg, y_val_reg, y_test_reg = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 157, in preprocess_data
+    X_train, X_val, y_train, y_val = train_test_split(
+                                     ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2940, in train_test_split
+    train, test = next(cv.split(X=arrays[0], y=stratify))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 1927, in split
+    for train, test in self._iter_indices(X, y, groups):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2342, in _iter_indices
+    raise ValueError(
+ValueError: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+2025-11-04 16:05:37,801 - __main__ - INFO - Starting model training...
+2025-11-04 16:05:37,807 - __main__ - INFO - Loading data...
+2025-11-04 16:05:37,807 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-04 16:05:38,983 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-04 16:05:38,983 - __main__ - INFO - Preprocessing data for classification...
+2025-11-04 16:05:38,983 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 16:05:39,105 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-04 16:05:39,107 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-04 16:05:39,516 - src.features.data_preprocessing - INFO - Detected task type: CLASSIFICATION
+2025-11-04 16:05:43,016 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-04 16:05:45,203 - __main__ - INFO - Training classification models...
+2025-11-04 16:05:45,553 - src.models.model_trainer - INFO - Training classification models...
+2025-11-04 16:05:45,610 - src.models.model_trainer - INFO - Training logistic_regression...
+2025-11-04 16:06:02,091 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-04 16:12:26,733 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-04 16:12:39,095 - src.models.model_trainer - INFO - Training gradient_boosting...
+2025-11-04 16:21:14,030 - src.models.model_trainer - INFO - Best classification model: xgboost with F1-score: 0.9874
+2025-11-04 16:21:14,077 - __main__ - INFO - Saved classification model to models\best_classification_model.joblib
+2025-11-04 16:21:14,145 - __main__ - INFO - Preprocessing data for regression...
+2025-11-04 16:21:14,146 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 16:21:14,281 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure']
+2025-11-04 16:21:14,281 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario', 'emi_eligibility']
+2025-11-04 16:21:14,711 - src.features.data_preprocessing - INFO - Detected task type: REGRESSION
+2025-11-04 16:21:15,047 - __main__ - ERROR - Error during model training: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 105, in train_models
+    X_train_reg, X_val_reg, X_test_reg, y_train_reg, y_val_reg, y_test_reg = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 157, in preprocess_data
+    X_train, X_val, y_train, y_val = train_test_split(
+                                     ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2940, in train_test_split
+    train, test = next(cv.split(X=arrays[0], y=stratify))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 1927, in split
+    for train, test in self._iter_indices(X, y, groups):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2342, in _iter_indices
+    raise ValueError(
+ValueError: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+2025-11-04 16:21:15,052 - __main__ - ERROR - Error in main: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 105, in train_models
+    X_train_reg, X_val_reg, X_test_reg, y_train_reg, y_val_reg, y_test_reg = preprocess_data(
+                                                                             ^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 145, in preprocess_data
+    X_train, X_val, X_test, y_train, y_val, y_test = preprocessor.preprocess_data(df)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\features\data_preprocessing.py", line 157, in preprocess_data
+    X_train, X_val, y_train, y_val = train_test_split(
+                                     ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2940, in train_test_split
+    train, test = next(cv.split(X=arrays[0], y=stratify))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 1927, in split
+    for train, test in self._iter_indices(X, y, groups):
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2342, in _iter_indices
+    raise ValueError(
+ValueError: The least populated class in y has only 1 member, which is too few. The minimum number of groups for any class cannot be less than 2.
+2025-11-04 16:25:52,365 - __main__ - INFO - Starting model training...
+2025-11-04 16:25:52,365 - __main__ - INFO - Loading data...
+2025-11-04 16:25:52,365 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-04 16:25:53,363 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-04 16:25:53,363 - __main__ - INFO - Preprocessing data for classification...
+2025-11-04 16:25:53,363 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 16:25:53,461 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-04 16:25:53,461 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-04 16:25:53,802 - src.features.data_preprocessing - INFO - Detected task type: CLASSIFICATION
+2025-11-04 16:25:57,308 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-04 16:25:59,520 - __main__ - INFO - Training classification models...
+2025-11-04 16:26:00,112 - src.models.model_trainer - INFO - Training classification models...
+2025-11-04 16:26:00,212 - src.models.model_trainer - INFO - Training logistic_regression...
+2025-11-04 16:26:22,656 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-04 16:35:54,559 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-04 16:36:07,248 - src.models.model_trainer - INFO - Training gradient_boosting...
+2025-11-04 16:44:49,162 - src.models.model_trainer - INFO - Best classification model: xgboost with F1-score: 0.9874
+2025-11-04 16:44:49,199 - __main__ - INFO - Saved classification model to models\best_classification_model.joblib
+2025-11-04 16:44:49,274 - __main__ - INFO - Preprocessing data for regression...
+2025-11-04 16:44:49,274 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 16:44:49,367 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure']
+2025-11-04 16:44:49,367 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario', 'emi_eligibility']
+2025-11-04 16:44:49,642 - src.features.data_preprocessing - INFO - Detected task type: REGRESSION
+2025-11-04 16:49:25,275 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-04 16:49:25,414 - __main__ - ERROR - Error during model training: too many values to unpack (expected 6)
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 105, in train_models
+    X_train_reg, X_val_reg, X_test_reg, y_train_reg, y_val_reg, y_test_reg = preprocess_data(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 6)
+2025-11-04 16:49:25,414 - __main__ - ERROR - Error in main: too many values to unpack (expected 6)
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 105, in train_models
+    X_train_reg, X_val_reg, X_test_reg, y_train_reg, y_val_reg, y_test_reg = preprocess_data(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 6)
+2025-11-04 17:18:43,738 - __main__ - INFO - Starting model training...
+2025-11-04 17:18:43,738 - __main__ - INFO - Loading data...
+2025-11-04 17:18:43,738 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-04 17:18:44,907 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-04 17:18:44,911 - __main__ - INFO - Preprocessing data for classification...
+2025-11-04 17:18:44,911 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 17:18:45,027 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-04 17:18:45,027 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-04 17:18:45,418 - src.features.data_preprocessing - INFO - Detected task type: CLASSIFICATION
+2025-11-04 17:18:48,795 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-04 17:18:50,969 - __main__ - ERROR - Error during model training: not enough values to unpack (expected 7, got 6)
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 71, in train_models
+    X_train_clf, X_val_clf, X_test_clf, y_train_clf, y_val_clf, y_test_clf, preprocessor  = preprocess_data(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 7, got 6)
+2025-11-04 17:18:50,969 - __main__ - ERROR - Error in main: not enough values to unpack (expected 7, got 6)
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 71, in train_models
+    X_train_clf, X_val_clf, X_test_clf, y_train_clf, y_val_clf, y_test_clf, preprocessor  = preprocess_data(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 7, got 6)
+2025-11-04 17:22:27,933 - __main__ - INFO - Starting model training...
+2025-11-04 17:22:27,933 - __main__ - INFO - Loading data...
+2025-11-04 17:22:27,933 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-04 17:22:29,080 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-04 17:22:29,080 - __main__ - INFO - Preprocessing data for classification...
+2025-11-04 17:22:29,080 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 17:22:29,202 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-04 17:22:29,202 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-04 17:22:29,603 - src.features.data_preprocessing - INFO - Detected task type: CLASSIFICATION
+2025-11-04 17:22:32,948 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-04 17:22:35,108 - __main__ - ERROR - Error during model training: name 'preprocessor' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 78, in train_models
+    joblib.dump(preprocessor.preprocessor, preprocessor_path)
+                ^^^^^^^^^^^^
+NameError: name 'preprocessor' is not defined
+2025-11-04 17:22:35,108 - __main__ - ERROR - Error in main: name 'preprocessor' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 78, in train_models
+    joblib.dump(preprocessor.preprocessor, preprocessor_path)
+                ^^^^^^^^^^^^
+NameError: name 'preprocessor' is not defined
+2025-11-04 18:47:07,069 - __main__ - INFO - Starting model training...
+2025-11-04 18:47:07,069 - __main__ - INFO - Loading data...
+2025-11-04 18:47:07,069 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-04 18:47:08,245 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-04 18:47:08,245 - __main__ - INFO - Preprocessing data for classification...
+2025-11-04 18:47:08,245 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 18:47:08,366 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-04 18:47:08,366 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-04 18:47:08,774 - src.features.data_preprocessing - INFO - Detected task type: CLASSIFICATION
+2025-11-04 18:47:12,383 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-04 18:47:14,564 - __main__ - INFO - Training classification models...
+2025-11-04 18:47:15,042 - src.models.model_trainer - INFO - Training classification models...
+2025-11-04 18:47:15,100 - src.models.model_trainer - INFO - Training logistic_regression...
+2025-11-04 18:47:28,887 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-04 18:54:36,323 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-04 18:54:49,999 - src.models.model_trainer - INFO - Training gradient_boosting...
+2025-11-04 19:03:44,807 - src.models.model_trainer - INFO - Best classification model: xgboost with F1-score: 0.9874
+2025-11-04 19:03:44,878 - __main__ - INFO - Saved classification model to models\best_classification_model.joblib
+2025-11-04 19:03:44,955 - __main__ - INFO - Preprocessing data for regression...
+2025-11-04 19:03:44,956 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-04 19:03:45,072 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure']
+2025-11-04 19:03:45,080 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario', 'emi_eligibility']
+2025-11-04 19:03:45,512 - src.features.data_preprocessing - INFO - Detected task type: REGRESSION
+2025-11-04 19:08:22,262 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-04 19:08:22,342 - __main__ - INFO - Training regression models...
+2025-11-04 19:08:22,342 - src.models.model_trainer - INFO - Training regression models...
+2025-11-04 19:08:22,401 - __main__ - ERROR - Error during model training: Run with UUID e8572d45103443e4b16db5b40b7f4382 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 112, in train_models
+    reg_result = trainer.train_regression_models(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\models\model_trainer.py", line 167, in train_regression_models
+    with mlflow.start_run(run_name=f"regression_{name}"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 380, in start_run
+    raise Exception(
+Exception: Run with UUID e8572d45103443e4b16db5b40b7f4382 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2025-11-04 19:08:22,403 - __main__ - ERROR - Error in main: Run with UUID e8572d45103443e4b16db5b40b7f4382 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 156, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 112, in train_models
+    reg_result = trainer.train_regression_models(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\src\models\model_trainer.py", line 167, in train_regression_models
+    with mlflow.start_run(run_name=f"regression_{name}"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hamza\EMIFinal\venv\Lib\site-packages\mlflow\tracking\fluent.py", line 380, in start_run
+    raise Exception(
+Exception: Run with UUID e8572d45103443e4b16db5b40b7f4382 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2025-11-04 19:17:25,979 - __main__ - ERROR - Error during model training: cannot access local variable 'mlflow' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 54, in train_models
+    mlflow.set_tracking_uri(MLflowConfig.TRACKING_URI)
+    ^^^^^^
+UnboundLocalError: cannot access local variable 'mlflow' where it is not associated with a value
+2025-11-04 19:17:25,982 - __main__ - ERROR - Error in main: cannot access local variable 'mlflow' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 160, in main
+    train_models()
+  File "C:\Users\Hamza\EMIFinal\train_and_save_models.py", line 54, in train_models
+    mlflow.set_tracking_uri(MLflowConfig.TRACKING_URI)
+    ^^^^^^
+UnboundLocalError: cannot access local variable 'mlflow' where it is not associated with a value
+2025-11-05 00:00:20,507 - __main__ - INFO - Starting model training...
+2025-11-05 00:00:20,507 - __main__ - INFO - Loading data...
+2025-11-05 00:00:20,510 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-05 00:00:21,757 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-05 00:00:21,757 - __main__ - INFO - Preprocessing data for classification...
+2025-11-05 00:00:21,757 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-05 00:00:21,909 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-05 00:00:21,909 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-05 00:00:22,322 - src.features.data_preprocessing - INFO - Detected task type: CLASSIFICATION
+2025-11-05 00:00:25,924 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-05 00:00:28,126 - __main__ - INFO - Training classification models...
+2025-11-05 00:00:29,098 - src.models.model_trainer - INFO - Training classification models...
+2025-11-05 00:00:29,163 - src.models.model_trainer - INFO - Training logistic_regression...
+2025-11-05 00:00:46,710 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-05 00:10:34,415 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-05 00:10:46,557 - src.models.model_trainer - INFO - Training gradient_boosting...
+2025-11-05 00:19:40,942 - src.models.model_trainer - INFO - Best classification model: xgboost with F1-score: 0.9874
+2025-11-05 00:19:41,016 - __main__ - INFO - Saved classification model to models\best_classification_model.joblib
+2025-11-05 00:19:41,136 - __main__ - INFO - Preprocessing data for regression...
+2025-11-05 00:19:41,136 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-05 00:19:41,280 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure']
+2025-11-05 00:19:41,280 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario', 'emi_eligibility']
+2025-11-05 00:19:41,711 - src.features.data_preprocessing - INFO - Detected task type: REGRESSION
+2025-11-05 00:20:16,537 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-05 00:20:16,608 - __main__ - INFO - Training regression models...
+2025-11-05 00:20:16,613 - src.models.model_trainer - INFO - Training regression models...
+2025-11-05 00:20:16,661 - src.models.model_trainer - INFO - Training linear_regression...
+2025-11-05 00:20:27,150 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-05 02:14:01,323 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-05 02:14:11,051 - src.models.model_trainer - INFO - Training svr...
+2025-11-05 19:18:00,038 - __main__ - INFO - Starting model training...
+2025-11-05 19:18:00,040 - __main__ - INFO - Loading data...
+2025-11-05 19:18:00,040 - src.data.data_loader - INFO - Loading data from C:\Users\Hamza\EMIFinal\emi_prediction_dataset.csv
+2025-11-05 19:18:00,703 - src.data.data_loader - INFO - Successfully loaded data with shape: (404800, 27)
+2025-11-05 19:18:00,703 - __main__ - INFO - Preprocessing data for classification...
+2025-11-05 19:18:00,703 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-05 19:18:00,780 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure', 'max_monthly_emi']
+2025-11-05 19:18:00,780 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario']
+2025-11-05 19:18:01,013 - src.features.data_preprocessing - INFO - Detected task type: CLASSIFICATION
+2025-11-05 19:18:03,071 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-05 19:18:03,155 - __main__ - INFO - Training classification models...
+2025-11-05 19:18:03,609 - src.models.model_trainer - INFO - Training classification models...
+2025-11-05 19:18:03,638 - src.models.model_trainer - INFO - Training logistic_regression...
+2025-11-05 19:18:12,521 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-05 19:23:30,767 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-05 19:23:37,499 - src.models.model_trainer - INFO - Training gradient_boosting...
+2025-11-05 19:28:36,736 - src.models.model_trainer - INFO - Best classification model: xgboost with F1-score: 0.9874
+2025-11-05 19:28:36,764 - __main__ - INFO - Saved classification model to models\best_classification_model.joblib
+2025-11-05 19:28:36,816 - __main__ - INFO - Preprocessing data for regression...
+2025-11-05 19:28:36,816 - src.features.data_preprocessing - INFO - Starting data preprocessing...
+2025-11-05 19:28:36,893 - src.features.data_preprocessing - INFO - Identified numerical features: ['years_of_employment', 'monthly_rent', 'family_size', 'dependents', 'school_fees', 'college_fees', 'travel_expenses', 'groceries_utilities', 'other_monthly_expenses', 'current_emi_amount', 'credit_score', 'emergency_fund', 'requested_amount', 'requested_tenure']
+2025-11-05 19:28:36,893 - src.features.data_preprocessing - INFO - Identified categorical features: ['age', 'gender', 'marital_status', 'education', 'monthly_salary', 'employment_type', 'company_type', 'house_type', 'existing_loans', 'bank_balance', 'emi_scenario', 'emi_eligibility']
+2025-11-05 19:28:37,147 - src.features.data_preprocessing - INFO - Detected task type: REGRESSION
+2025-11-05 19:28:53,599 - src.features.data_preprocessing - INFO - Data split sizes - Train: 283360, Val: 40480, Test: 80960
+2025-11-05 19:28:53,654 - __main__ - INFO - Training regression models...
+2025-11-05 19:28:53,655 - src.models.model_trainer - INFO - Training regression models...
+2025-11-05 19:28:53,682 - src.models.model_trainer - INFO - Training linear_regression...
+2025-11-05 19:28:59,334 - src.models.model_trainer - INFO - Training random_forest...
+2025-11-05 20:40:37,012 - urllib3.connectionpool - WARNING - Retrying (Retry(total=6, connect=7, read=6, redirect=7, status=7)) after connection broken by 'TimeoutError('timed out')': /api/2.0/mlflow-artifacts/artifacts/295222182337970851/models/m-94e9694dd07248f4997a84f9e3d0a16b/artifacts/model.pkl
+2025-11-05 21:55:37,924 - src.models.model_trainer - INFO - Training xgboost...
+2025-11-05 21:55:41,132 - src.models.model_trainer - INFO - Training gradient_boosting...
+2025-11-05 21:56:48,883 - src.models.model_trainer - INFO - Best regression model: random_forest with RMSE: 2833.3688
+2025-11-05 21:56:50,283 - __main__ - INFO - Saved regression model to models\best_regression_model.joblib
+2025-11-05 21:56:50,350 - __main__ - INFO - Model training completed successfully!
+2025-11-05 21:56:50,531 - __main__ - INFO - Training completed successfully!
