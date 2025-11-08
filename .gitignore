@@ -1,0 +1,34 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Model and data artifacts
+models/
+artifacts/
+mlruns/
+mlartifacts/
+data/
+*.joblib
+*.pkl
+*.csv
+*.json
+
+# Logs and caches
+__pycache__/
+*.log
+
+# Streamlit cache
+.streamlit/
+*/.streamlit/
+
+# OS / IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
