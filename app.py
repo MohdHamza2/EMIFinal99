@@ -1,4 +1,5 @@
 import os
+os.environ["STREAMLIT_WATCH_FILE_CHANGES"] = "false"
 import sys
 import time
 import gdown
