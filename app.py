@@ -1,15 +1,13 @@
-import streamlit as st
-import pandas as pd
-import numpy as np
-import joblib
-import time
-from pathlib import Path
-import plotly.graph_objects as go
-import plotly.express as px
 import sys, os
-
 import gdown
 from pathlib import Path
+
+# --- Ensure gdown is available ---
+try:
+    import gdown
+except ImportError:
+    os.system("pip install gdown")
+    import gdown
 
 MODELS_DIR = Path("models")
 MODELS_DIR.mkdir(exist_ok=True)
@@ -22,13 +20,24 @@ def download_models():
         "best_regression_model.joblib": "https://drive.google.com/uc?id=1capauhMI6Hl8W7w-dyqDQRKgAF6k0J92",
     }
     for name, url in files.items():
-        path = MODELS_DIR / name
-        if not path.exists():
-            st.info(f"📥 Downloading {name}...")
-            gdown.download(url, str(path), quiet=False)
-
+        dest = MODELS_DIR / name
+        if not dest.exists():
+            print(f"📥 Downloading {name}...")
+            gdown.download(url, str(dest), quiet=False)
+        else:
+            print(f"✅ {name} already exists.")
 # Call this before load_models()
 download_models()
+
+import streamlit as st
+import pandas as pd
+import numpy as np
+import joblib
+import time
+from pathlib import Path
+import plotly.graph_objects as go
+import plotly.express as px
+
 
 # Add path for imports
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
