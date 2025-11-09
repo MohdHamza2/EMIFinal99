@@ -1,17 +1,15 @@
-import sys, os
+import os
+import sys
+import time
 import gdown
 from pathlib import Path
 
-# --- Ensure gdown is available ---
-try:
-    import gdown
-except ImportError:
-    os.system("pip install gdown")
-    import gdown
-
-MODELS_DIR = Path("models")
+# --- Setup absolute model directory ---
+BASE_DIR = Path(__file__).resolve().parent
+MODELS_DIR = BASE_DIR / "models"
 MODELS_DIR.mkdir(exist_ok=True)
 
+# --- Download models if missing ---
 def download_models():
     files = {
         "preprocessor.joblib": "https://drive.google.com/uc?id=1I-MrTta_UJBEdGwedMZ6CPhLo6V0CiTv",
@@ -19,31 +17,35 @@ def download_models():
         "best_classification_model.joblib": "https://drive.google.com/uc?id=13T0g8YMf-q7EE3yjAxvUuR9rTkG7iBId",
         "best_regression_model.joblib": "https://drive.google.com/uc?id=1capauhMI6Hl8W7w-dyqDQRKgAF6k0J92",
     }
+
+    print("🔍 Checking models folder...")
     for name, url in files.items():
         dest = MODELS_DIR / name
         if not dest.exists():
             print(f"📥 Downloading {name}...")
             gdown.download(url, str(dest), quiet=False)
+            if dest.exists():
+                print(f"✅ {name} downloaded successfully.")
+            else:
+                print(f"❌ Failed to download {name}!")
         else:
             print(f"✅ {name} already exists.")
-# Call this before load_models()
+
+# Run the download
 download_models()
+
+# --- Ensure sys.path has the project directory ---
+sys.path.append(str(BASE_DIR))
 
 import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-import time
-from pathlib import Path
 import plotly.graph_objects as go
 import plotly.express as px
 
-
-# Add path for imports
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from config.config import Paths
 from predict import make_prediction, load_models
-
 
 # ---------------------------------------------
 # Streamlit Page Configuration
