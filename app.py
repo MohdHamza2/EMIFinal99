@@ -39,6 +39,8 @@ download_models()
 sys.path.append(str(BASE_DIR))
 
 import streamlit as st
+st.set_option("client.showErrorDetails", True)
+
 import pandas as pd
 import numpy as np
 import joblib
