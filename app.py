@@ -8,12 +8,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import sys, os
 
-# Add path for imports
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-from config.config import Paths
-from predict import make_prediction, load_models
-
-import gdown, os
+import gdown
 from pathlib import Path
 
 MODELS_DIR = Path("models")
@@ -34,6 +29,11 @@ def download_models():
 
 # Call this before load_models()
 download_models()
+
+# Add path for imports
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+from config.config import Paths
+from predict import make_prediction, load_models
 
 
 # ---------------------------------------------
