@@ -13,6 +13,29 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from config.config import Paths
 from predict import make_prediction, load_models
 
+import gdown, os
+from pathlib import Path
+
+MODELS_DIR = Path("models")
+MODELS_DIR.mkdir(exist_ok=True)
+
+def download_models():
+    files = {
+        "preprocessor.joblib": "https://drive.google.com/uc?id=1I-MrTta_UJBEdGwedMZ6CPhLo6V0CiTv",
+        "label_encoder.joblib": "https://drive.google.com/uc?id=1gC7m50nG_l_-Bo4JprYC7xsWBYcWd6S7",
+        "best_classification_model.joblib": "https://drive.google.com/uc?id=13T0g8YMf-q7EE3yjAxvUuR9rTkG7iBId",
+        "best_regression_model.joblib": "https://drive.google.com/uc?id=1capauhMI6Hl8W7w-dyqDQRKgAF6k0J92",
+    }
+    for name, url in files.items():
+        path = MODELS_DIR / name
+        if not path.exists():
+            st.info(f"📥 Downloading {name}...")
+            gdown.download(url, str(path), quiet=False)
+
+# Call this before load_models()
+download_models()
+
+
 # ---------------------------------------------
 # Streamlit Page Configuration
 # ---------------------------------------------
