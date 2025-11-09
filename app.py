@@ -77,11 +77,13 @@ st.markdown(
 # ---------------------------------------------
 # Load Models
 # ---------------------------------------------
-try:
-    preprocessor, label_encoder, best_classification_model, best_regression_model = load_models()
-except Exception as e:
-    st.error(f"❌ Failed to load models: {e}")
-    st.stop()
+#try:
+ #   preprocessor, label_encoder, best_classification_model, best_regression_model = load_models()
+#except Exception as e:
+ #   st.error(f"❌ Failed to load models: {e}")
+  #  st.stop()
+# 💤 Lazy load models later (not at startup)
+st.sidebar.info("⏳ Models will be loaded automatically when you submit the form.")
 
 # ---------------------------------------------
 # Model Status Section (inserted here)
@@ -178,6 +180,11 @@ with st.form("emi_form"):
 # On Submit
 # ---------------------------------------------
 if submit:
+    st.sidebar.info("📥 Loading AI models...")
+    from predict import load_models
+    preprocessor, label_encoder, best_classification_model, best_regression_model = load_models()
+    st.sidebar.success("✅ Models loaded successfully!")
+    
     input_data = {
         "age": age,
         "gender": gender,
